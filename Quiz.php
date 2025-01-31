@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-// W3C// DTD XHTML 1.0 Transitional// EN"
+ "http:// www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:// www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>PHP Quiz</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Test</h1>
-  <a href="link.html">Go to index</a>
-  <form action="/Quiz_Answer.php" method="post" name="quiz_form">
+<br>
+<br>
+<div class="center">
+<H1>
+<font color="blue">クイズ課題</font>
+
+</H1>
+
+<form action="/Quiz_Answer.php" method="post"" name="quiz_form">
     <label for="quiz1">クイズ１：WEBページを記述するための言語は何でしょうか？</label>
     <br>
     <input type="text" id="quiz1" name="quiz1">
@@ -38,5 +45,7 @@
     <br>
 </form>
 
+</div>
 </body>
 </html>
+
