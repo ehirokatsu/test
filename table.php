@@ -1,10 +1,12 @@
 <?php
-// データベース接続情報
-$host = "dpg-cuookv9opnds738u2cp0-a.singapore-postgres.render.com"; // Renderのホスト名
-$port = "5432"; // ポート番号
-$dbname = "boards_4ygy"; // データベース名
-$user = "test"; // ユーザー名
-$password = "G5AprTcABU6ewcb4TzDpMgTskxhuK5V8"; // パスワード（実運用では.envに保存推奨）
+require __DIR__ . '/load_env.php';
+
+// 環境変数からデータベース接続情報を取得
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$dbname = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
 
 // PDOを使用してデータベースに接続
 try {
