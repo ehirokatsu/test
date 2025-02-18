@@ -9,4 +9,10 @@ if (!getenv('RENDER')) {
         }
     }
 }
+// デバッグ用（環境変数の取得状況をログ出力）
+error_log("DB_HOST: " . getenv('DB_HOST'));
+error_log("DB_PORT: " . getenv('DB_PORT'));
+error_log("DB_NAME: " . getenv('DB_NAME'));
+error_log("DB_USER: " . getenv('DB_USER'));
+error_log("DB_PASSWORD: " . getenv('DB_PASSWORD'));
 ?>
