@@ -8,6 +8,17 @@ if (!getenv('RENDER')) {
             putenv($line);
         }
     }
+} else {
+    $secret_path = "/etc/secrets/";
+
+    $env_vars = ['DB_HOST', 'DB_PORT', 'DB_NAME', 'DB_USER', 'DB_PASSWORD'];
+    
+    foreach ($env_vars as $var) {
+        if (file_exists($secret_path . $var)) {
+            putenv("$var=" . trim(file_get_contents($secret_path . $var)));
+        }
+    }
+
 }
 // デバッグ用（環境変数の取得状況をログ出力）
 error_log("DB_HOST: " . getenv('DB_HOST'));
